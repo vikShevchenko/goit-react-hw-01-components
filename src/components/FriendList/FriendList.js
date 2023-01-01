@@ -1,26 +1,20 @@
-import React from 'react'
-import './FriendsList.css'
+import React from 'react';
+import css from'./FriendsList.module.css';
+import FriendCard from './FriendCard';
 
-
-function FriendList({friends}) {
-   
+function FriendList({ friends }) {
   return (
-    <div >
-        <ul className='friendsBlock'>
-        
+    <>
+      <ul className={css.friendsBlock}>
         {friends.map(data => (
-       
-        <li className="frandItem" key={data.id}> 
-        <span className="status">{data.isOnline?(<span className='online'/>) : (<span className='ofline'/>)}</span>
-        <img className="frandAvatar" src={data.avatar} alt="User avatar" width="25" />
-        <p className="friendName">{data.name}</p>
-        </li>
-       
-        )  ) }
-
-        </ul>
-    </div>
-  )
+        <FriendCard key={data.id}
+        avatar={data.avatar}
+        name={data.name} 
+        isOnline={data.isOnline} />
+        ))}
+      </ul>
+    </>
+  );
 }
 
-export default FriendList
+export default FriendList;

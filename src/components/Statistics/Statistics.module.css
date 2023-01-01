@@ -8,14 +8,11 @@
     text-align: center;
     background-color: #fff;
     padding: 40px ;
-    margin: 0px;
 }
-.stat-list{
+.stat{
     display: flex;
     list-style: none;
     justify-content: space-evenly;
-    padding: 0px;
-    margin: 0px;
 }
 .item{
     display: flex;

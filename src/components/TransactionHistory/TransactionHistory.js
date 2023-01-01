@@ -1,49 +1,30 @@
-import React from 'react'
-import './TransactionHistory.css'
+import React from 'react';
+import css from './TransactionHistory.module.css';
+import TransactionRow from './TransactionRow';
 
 function TransactionHistory(props) {
-    
   return (
-    <div> 
-        <table className="transaction-history">
-  <thead className='header'>
-    <tr>
-      <th>Type</th>
-      <th>Amount</th>
-      <th>Currency</th>
-    </tr>
-  </thead>
-  
-  {props.items.map(item =>(
-    
- <tbody key={item.id}>
+    <div>
+      <table className={css.transactionHistory}>
+        <thead className={css.header}>
+          <tr>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Currency</th>
+          </tr>
+        </thead>
 
-    <tr>
-      <td>{item.type}</td>
-      <td>{item.amount}</td>
-      <td>{item.currency}</td>
-    </tr>
-  
-  </tbody> 
-     ))}
-</table>
-
+        {props.items.map(item => (
+          <TransactionRow
+            key={item.id}
+            type={item.type}
+            amount={item.amount}
+            currency={item.currency}
+          />
+        ))}
+      </table>
     </div>
-  )
+  );
 }
 
-export default TransactionHistory
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default TransactionHistory;

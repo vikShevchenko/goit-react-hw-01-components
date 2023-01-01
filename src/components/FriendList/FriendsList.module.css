@@ -1,9 +1,7 @@
 .friendsBlock{
     width: 400px;
     margin: 20px auto;
-    padding: 0px;
 }
-
 .frandItem{
     list-style: none;
     width: 100%;
@@ -18,25 +16,20 @@
 .frandAvatar{
     height: 100px;
     width: 100px;
-    padding: 0px;
 }
 .online, .ofline{
     display: block;
     height: 25px;
     width: 25px;
-    background-color: green;
+    background-color: rgb(80 174 79);
     border-radius: 50%;
     margin: 20px;
 }
-
 .ofline{
-    background-color: red;
+    background-color: rgb(255 81 80);
 }
-
 .friendName{
     padding-left: 40px;
     font-size: 40px;
-    font-weight: 600;
-
-    
+    font-weight: 600;   
 }

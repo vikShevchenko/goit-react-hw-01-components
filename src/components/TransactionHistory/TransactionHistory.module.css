@@ -1,14 +1,11 @@
-.transaction-history{
-
+.transactionHistory{
     text-indent: 0;
     width: 800px;
     margin: 80px auto;
     background-color: #fff;
     box-shadow: 0px 2px 5px rgb(122 137 153);
     border: 1px solid rgb(122 137 153);
-    border-collapse: collapse;
-
-    
+    border-collapse: collapse;    
 }
 .header{
     background-color: rgb(0 188 213);
@@ -22,9 +19,7 @@ th:not(:first-child){
 td{
     text-align: center;
 }
-
-td:not(:first-child){
-    
+td:not(:first-child){   
     border-left: 1px solid rgb(122 137 153);
 }
 tbody{
