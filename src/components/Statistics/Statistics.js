@@ -1,16 +1,17 @@
 import React from 'react';
 import css from './Statistics.module.css';
 import StatisticRow from './StatisticRow';
+import PropTypes from 'prop-types'
 
-export default function Statistics(props) {
-  const titles = props.title;
+export default function Statistics({title, stats}) {
+
   return (
     <div>
       <section className={css.statistics}>
-        {titles && <h2 className={css.title}>{titles}</h2>}
+        {title && <h2 className={css.title}>{title}</h2>}
 
         <ul className={css.stat}>
-          {props.stats.map(stat => (
+          {stats.map(stat => (
             <StatisticRow
               key={stat.id}
               label={stat.label}
@@ -21,5 +22,17 @@ export default function Statistics(props) {
       </section>
     </div>
   );
+}
+
+Statistics.propTypes = {
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+      id: PropTypes.string.isRequired,
+    })
+  ),
+  title: PropTypes.string
+
 }
 
